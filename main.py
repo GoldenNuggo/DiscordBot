@@ -1,6 +1,5 @@
 import hikari
 import lightbulb
-import discord
 
 #listenBot = hikari.GuildMessageCreateEvent
 
@@ -53,20 +52,5 @@ async def youtube(ctx):
 @lightbulb.implements(lightbulb.PrefixCommand)
 async def math(ctx):
     await ctx.respond(ctx.options.num1 + ctx.options.num2)
-
-@lightbulb.add_checks(lightbulb.owner_only)
-@bot.command
-@lightbulb.command('owner', "Doesn't even work lmao")
-@lightbulb.implements(lightbulb.PrefixCommand)
-async def owner(ctx: lightbulb.Context):
-  await owner.respond('Hola')
-
-#@bot.command
-#@lightbulb.command('kick', 'Kicks mentioned user')
-#@lightbulb.implements(lightbulb.PrefixCommand)
-#async def kick(ctx, member : discord.Member, *, reason=None):
-#  await member.kick(reason=reason)
-  
-#@bot.listen()
 
 bot.run()
