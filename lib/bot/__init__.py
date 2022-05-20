@@ -2,7 +2,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from discord.ext.commands import Bot as BotBase
 
 PREFIX = "!"
-OWNER_ID = [628480432467607552]
+OWNER_ID = [PUT YOUR DISCORD ID HERE]
 
 class Bot(BotBase):
   def __init__(self):
@@ -31,7 +31,7 @@ class Bot(BotBase):
   async def on_ready(self):
     if not self.ready:
       self.ready = True
-      self.guild = self.get_guild(852117164416958514)
+      self.guild = self.get_guild(PUT SERVER ID HERE)
       print("Bot Ready")
 
     else:
